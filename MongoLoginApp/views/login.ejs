@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angularjs/login.js"></script>
+</head>
+<body ng-app="login" ng-controller="login">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-md-12" style="margin: 10px;">
+					Username:<br> <input type="text" name="username"
+						ng-model="username">
+				</div>
+				<div class="col-md-12" style="margin: 10px;">
+					Password:<br> <input type="password" name="password"
+						ng-model="password">
+				</div>
+
+				<div class="col-md-12" style="margin: 10px;">
+					<div class="alert alert-danger" ng-hide="invalid_login">
+						<strong>Incorrect username or password</strong>
+					</div>
+					<div class="alert alert-danger" ng-hide="unexpected_error">
+						<strong>Unexpected error, try again</strong>
+					</div>
+					<input type="submit" class="btn btn-success" ng-click="submit();"
+						value="Login" />
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

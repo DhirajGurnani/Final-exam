@@ -10,7 +10,7 @@ var express = require('express')
 , path = require('path');
 
 //URL for the sessions collections in mongoDB
-var mongoSessionConnectURL = "mongodb://ec2-54-67-104-63.us-west-1.compute.amazonaws.com:27017/login";
+var mongoSessionConnectURL = "mongodb://ec2-52-53-204-135.us-west-1.compute.amazonaws.com:27017,ec2-52-53-254-105.us-west-1.compute.amazonaws.com:27017,ec2-54-67-63-207.us-west-1.compute.amazonaws.com:27017/login";
 var expressSession = require("express-session");
 var mongoStore = require("connect-mongo")(expressSession);
 var mongo = require("./routes/mongo");

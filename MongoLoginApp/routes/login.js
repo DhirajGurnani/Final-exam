@@ -49,7 +49,7 @@ exports.redirectToHomepage = function(req,res)
 			coll.findOne({username: req.session.username}, function(err, user){
 				if (user) {
 					console.log(user);
-					
+					user.ip = 172.31.7.223;
 					// This way subsequent requests will know the user is logged in.
 					//req.session.username = user.username;
 					console.log(req.session.username +" is the session");

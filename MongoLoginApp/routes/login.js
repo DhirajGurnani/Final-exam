@@ -54,7 +54,7 @@ exports.redirectToHomepage = function(req,res)
 					//req.session.username = user.username;
 					console.log(req.session.username +" is the session");
 					//json_responses = {"statusCode" : 200};
-					res.render("homepage",{username:user,username10:user.username,username9:user.username,username8:user.username,username7:user.username,username6:user.username,username5:user.username,username4:user.username,username3:user.username,username2:user.username,username1:user.username});
+					res.render("homepage",{username:user});
 					
 				} else {
 					console.log("returned false");

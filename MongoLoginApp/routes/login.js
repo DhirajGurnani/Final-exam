@@ -27,7 +27,7 @@ exports.checkLogin = function(req,res){
 
 			} else {
 				console.log("returned false");
-				json_responses = {"statusCode" : 200,"username":"HelloWorld#1"};
+				json_responses = {"statusCode" : 401};
 				res.send(json_responses);
 			}
 		});
